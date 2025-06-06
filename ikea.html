@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IKEA Vietnam Coming Soon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ikea-blue: #0051ba;
+      --ikea-yellow: #ffcc00;
+      --ikea-light: #f4f4f4;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Noto Sans', sans-serif;
+      background: linear-gradient(135deg, var(--ikea-yellow), var(--ikea-blue));
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(5px);
+      z-index: -1;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 0;
+      padding: 3em 2em;
+      backdrop-filter: blur(15px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      max-width: 500px;
+      color: #000;
+      animation: fadeIn 1s ease forwards;
+      opacity: 0;
+
+      border: 2px solid transparent;
+      background-clip: padding-box;
+      border-image: linear-gradient(to right, #ffcc00, #0051ba) 1;
+    }
+
+    .card h1 {
+      font-size: 2.5em;
+      font-weight: 700;
+      margin-bottom: 0.4em;
+      color: var(--ikea-blue);
+    }
+
+    .card p {
+      font-size: 1.3em;
+      margin-bottom: 2em;
+      color: #333;
+    }
+
+    .cta-button {
+      background-color: var(--ikea-blue);
+      color: #fff;
+      padding: 0.9em 2em;
+      border: none;
+      border-radius: 50px;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .cta-button:hover {
+      background-color: #003f91;
+      transform: scale(1.05);
+    }
+
+    .logo {
+      width: 120px;
+      margin-bottom: 1.5em;
+      animation: floatLogo 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatLogo {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(-6px);
+      }
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 2em 1.5em;
+      }
+
+      .card h1 {
+        font-size: 2em;
+      }
+
+      .card p {
+        font-size: 1.1em;
+      }
+
+      .logo {
+        width: 90px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay"></div>
+
+  <div class="card">
+    <img src="c:\Users\jester\Downloads\ikae.png" alt="IKEA Logo" class="logo">
+    <h1>COMING SOON IN VIETNAM (2028)</h1>
+    <p>
+    <p>SẮP RA MẮT TẠI VIỆT NAM (2028)</p>
+    <button class="cta-button" onclick="window.location.href='https://www.ikea.com/global/en/p/all-products/'">
+      Explore IKEA Catalogue
+    </button>
+  </div>
+
+</body>
+</html>
